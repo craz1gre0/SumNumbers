@@ -7,12 +7,14 @@
     <meta property="og:title" content="數字加總工具" />
     <meta property="og:description" content="把文字中數字部分加起來" />
     <meta property="og:url" content="https://craz1gre0.github.io" />
-    
 </head>
 <body>
     <h2>輸入文字並計算數字總和</h2>
     <p>可能會有些誤差，請見諒!</p>
     <textarea id="userInput" rows="30" cols="40" placeholder="請輸入文字"></textarea><br><br>
+
+    <input type="checkbox" id="ignoreSingleDigits"> 個位數字不列入計算<br><br>
+
     <button onclick="sumNumbers()">計算數字總和</button>
 
     <script src="script.js"></script>
