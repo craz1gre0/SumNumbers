@@ -7,10 +7,12 @@ function sumNumbers() {
         alert("未找到任何數字。");
         return;
     }
+
     const ignoreSingleDigits = document.getElementById("ignoreSingleDigits").checked;
 
     const filteredNumbers = numbers.filter(num => {
-        return !(ignoreSingleDigits && parseFloat(num) >= 1 && parseFloat(num) < 10 && num.indexOf('.') === -1);
+        const parsedNum = parseFloat(num);
+        return !(ignoreSingleDigits && parsedNum >= 1 && parsedNum < 10);
     });
 
     if (filteredNumbers.length === 0) {
